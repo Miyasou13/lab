@@ -11,14 +11,20 @@ http_archive(
 
 http_archive(
     name = "bazel_skylib",
-    strip_prefix = "bazel-skylib-main",
-    urls = ["https://github.com/bazelbuild/bazel-skylib/archive/main.zip"],
+    urls = ["https://github.com/bazelbuild/bazel-skylib/releases/download/1.3.0/bazel-skylib-1.3.0.tar.gz"],
+    sha256 = "74d544d96f4a5bb630d465ca8bbcfe231e3594e5aae57e1edbf17a6eb3ca2506",
+)
+
+http_archive(
+    name = "rules_cc",
+    urls = ["https://github.com/bazelbuild/rules_cc/archive/refs/tags/0.0.9.zip"],
+    strip_prefix = "rules_cc-0.0.9",
 )
 
 http_archive(
     name = "com_google_absl",
-    strip_prefix = "abseil-cpp-master",
-    urls = ["https://github.com/abseil/abseil-cpp/archive/master.zip"],
+    urls = ["https://github.com/abseil/abseil-cpp/archive/refs/tags/20230125.3.zip"],
+    strip_prefix = "abseil-cpp-20230125.3",
 )
 
 http_archive(
